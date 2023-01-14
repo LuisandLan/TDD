@@ -15,20 +15,31 @@ class NumbersTest {
         val expected = 16
         assertEquals(expected, actual)
     }
+
     @Test
-    fun test_difference(){
-        val numbers:Numbers = Numbers.Base(12,4)
+    fun test_difference() {
+        val numbers: Numbers = Numbers.Base(12, 4)
         val actual = numbers.dif()
         val expected = 8
-        assertEquals(expected,actual)
+        assertEquals(expected, actual)
 
     }
 
     @Test
-    fun test_divide(){
-        val numbers:Numbers = Numbers.Base(12,4)
+    fun test_divide() {
+        val numbers: Numbers = Numbers.Base(12, 4)
         val actual = numbers.div()
-        val expected = 3
-        assertEquals(expected,actual)
+        val expected = 3.0
+        assertEquals(expected, actual, 0.01)
     }
+
+    @Test
+    fun test_divide_double() {
+        val numbers: Numbers = Numbers.Base(10, 4)
+        val actual = numbers.div()
+        val expected = 2.5
+        assertEquals(expected,actual, 0.01)
+    }
+
+
 }
