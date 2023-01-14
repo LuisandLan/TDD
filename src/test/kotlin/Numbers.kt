@@ -1,5 +1,6 @@
 interface Numbers {
     fun sum(): Int
+    fun dif():Int
 
 
     class Base(
@@ -10,6 +11,9 @@ interface Numbers {
         override fun sum(): Int {
 
             return number1 + number2
+        }
+        override fun dif():Int {
+            return  number1 - number2
         }
 
     }
