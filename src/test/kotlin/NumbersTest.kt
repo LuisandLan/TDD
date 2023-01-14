@@ -1,6 +1,7 @@
 import org.testng.Assert.assertEquals
 import org.testng.annotations.Test
 
+
 /**
  * @author Ruslan Gadzhiev on 14.01.23
  * Test Driven Development
@@ -38,7 +39,15 @@ class NumbersTest {
         val numbers: Numbers = Numbers.Base(10, 4)
         val actual = numbers.div()
         val expected = 2.5
-        assertEquals(expected,actual, 0.01)
+        assertEquals(expected, actual, 0.01)
+    }
+
+    @Test
+    fun test_divide_zero() {
+        val numbers: Numbers = Numbers.Base(10, 0)
+        val actual = numbers.div()
+        val expected = 1.0 / 0.0
+        assertEquals(expected, actual)
     }
 
 
