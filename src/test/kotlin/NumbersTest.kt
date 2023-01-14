@@ -23,4 +23,12 @@ class NumbersTest {
         assertEquals(expected,actual)
 
     }
+
+    @Test
+    fun test_divide(){
+        val numbers:Numbers = Numbers.Base(12,4)
+        val actual = numbers.div()
+        val expected = 3
+        assertEquals(expected,actual)
+    }
 }
