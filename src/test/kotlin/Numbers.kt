@@ -3,7 +3,6 @@ interface Numbers {
     fun dif(): Int
     fun div(): Double
 
-
     class Base(
         private val number1: Int,
         private val number2: Int
@@ -19,7 +18,10 @@ interface Numbers {
         }
 
         override fun div(): Double {
-            return number1.toDouble() / number2
+            if (number2 == 0)
+                throw IllegalAccessException()
+                return number1.toDouble() / number2
+
         }
 
 

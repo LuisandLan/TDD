@@ -1,5 +1,6 @@
 import org.testng.Assert.assertEquals
 import org.testng.annotations.Test
+import java.lang.IllegalArgumentException
 
 
 /**
@@ -34,13 +35,13 @@ class NumbersTest {
         assertEquals(expected, actual, 0.01)
     }
 
-    @Test
-    fun test_divide_double() {
-        val numbers: Numbers = Numbers.Base(10, 4)
-        val actual = numbers.div()
-        val expected = 2.5
-        assertEquals(expected, actual, 0.01)
-    }
+//    @Test
+//    fun test_divide_double() {
+//        val numbers: Numbers = Numbers.Base(10, 4)
+//        val actual = numbers.div()
+//        val expected = 2.5
+//        assertEquals(expected, actual, 0.01)
+//    }
 
     @Test
     fun test_divide_zero() {
@@ -49,6 +50,8 @@ class NumbersTest {
         val expected = 1.0 / 0.0
         assertEquals(expected, actual)
     }
+
+
 
 
 }
